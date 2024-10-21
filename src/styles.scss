@@ -1,0 +1,180 @@
+@use '@angular/material' as mat;
+@include mat.core();
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$sos-360-web-primary: mat.define-palette((50: #e6e8f1,
+      100: #bfc5dd,
+      200: #969fc5,
+      300: #6e7bae,
+      400: #505f9e,
+      500: #31458f,
+      600: #2b3e86,
+      700: #23357b,
+      800: #1b2c6f,
+      900: #0e1c59,
+      A100: #e6e8f1,
+      A200: #bfc5dd,
+      A400: #505f9e,
+      A700: #0e1c59,
+      contrast: (50: rgba(black, 0.87),
+        100: rgba(black, 0.87),
+        200: rgba(black, 0.87),
+        300: rgba(white, 0.87),
+        400: rgba(white, 0.87),
+        500: rgba(white, 0.87),
+        600: rgba(white, 0.87),
+        700: rgba(white, 0.87),
+        800: rgba(white, 0.87),
+        900: rgba(white, 0.87),
+        A100: rgba(black, 0.87),
+        A200: rgba(black, 0.87),
+        A400: rgba(white, 0.87),
+        A700: rgba(white, 0.87))));
+
+$sos-360-web-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$sos-360-web-warn: mat.define-palette(mat.$red-palette);
+
+$sos-360-web-theme: mat.define-light-theme(
+  (
+    color:
+      (
+        primary: $sos-360-web-primary,
+        accent: $sos-360-web-accent,
+        warn: $sos-360-web-warn,
+      )
+  )
+);
+
+:root {
+  --white: #ffff;
+  --white-70: rgba(242, 242, 242, 0.70);
+  --black: #0D0D0D;
+  --black-70: rgba(13, 13, 13, 0.70);
+  --dark-bkg: #1f1f1f;
+  --dark-header: #272727;
+  --light-bkg: #fbfcff;
+
+  --fullwidth: 100%;
+}
+
+@include mat.all-component-themes($sos-360-web-theme);
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body.dark-mode {
+  background-color: var(--dark-bkg) !important;
+  color: var(--white-70) !important;
+
+  .text-color,
+  .text-color-white {
+    color: var(--white-70) !important;
+  }
+}
+
+body.light-mode {
+  background-color: var(--light-bkg) !important;
+  color: var(--black-70) !important;
+
+  .text-color {
+    color: var(--rainy-blue-70) !important;
+  }
+
+  .text-color-white {
+    color: var(--black-70) !important;
+  }
+}
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.ff-inp-md {
+  height: clamp(40px, 5vw, 60px);
+  font-size: clamp(16px, 2vw, 24px);
+  width: clamp(200px, 30vw, 400px);
+}
+
+.mdc-radio__inner-circle {
+  background: var(--mdc-radio-selected-icon-color, #6200ee);
+}

@@ -1,0 +1,21 @@
+.check_box {
+  display:none;
+}
+
+//light mode
+.check_box + label{
+  display: flex;
+  background: url('../../../assets/icons/lightModeToggle.svg') center;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+
+//dark mode
+.check_box:checked + label{
+  display: flex;
+  background: url('../../../assets/icons/darkModeToggle.svg') center;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
