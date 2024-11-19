@@ -28,15 +28,17 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     DarkModeToggleComponent,
     LoginComponent,
     HeaderComponent,
     FooterComponent,
     LanguageSelectorComponent,
+      AdminComponent
    ],
   imports: [
     // Local Modules
