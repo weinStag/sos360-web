@@ -29,16 +29,22 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { AdminComponent } from './admin/admin.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { UserTableComponent } from './userTable/userTable.component';
+import { AddUserComponent } from './addUser/addUser.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     DarkModeToggleComponent,
     LoginComponent,
     HeaderComponent,
     FooterComponent,
     LanguageSelectorComponent,
-      AdminComponent
+    AdminComponent,
+    UserTableComponent,
+    AddUserComponent
    ],
   imports: [
     // Local Modules
@@ -65,6 +71,9 @@ import { AdminComponent } from './admin/admin.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatGridListModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
     // Translate Modules
     TranslateModule.forRoot({
       loader: { provide: TranslateLoader, useClass: AppTranslateLoader },
