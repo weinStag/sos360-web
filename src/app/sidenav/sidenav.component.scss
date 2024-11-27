@@ -1,0 +1,29 @@
+.sidenav-text{
+  font-size: 20px;
+
+  .subitems {
+    padding: 0px 0px 12px 12px; // Indent child items
+  }
+
+  .children{
+    cursor: pointer;
+  }
+
+  .sidenav-title{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-block: 10px;
+  }
+
+  mat-icon{
+    cursor: pointer;
+  }
+
+  .children-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}

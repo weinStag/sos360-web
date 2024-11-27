@@ -11,8 +11,4 @@ export class AdminComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  navigateToAddUser() {
-    this.router.navigate(['/adduser']);
-  }
 }

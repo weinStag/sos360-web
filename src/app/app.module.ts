@@ -33,6 +33,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { UserTableComponent } from './userTable/userTable.component';
 import { AddUserComponent } from './addUser/addUser.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { ViewNotificationsComponent } from './view-notifications/view-notifications.component';
+import { NavService } from './services/nav.service';
+
 
 @NgModule({
   declarations: [
@@ -44,7 +49,9 @@ import { AddUserComponent } from './addUser/addUser.component';
     LanguageSelectorComponent,
     AdminComponent,
     UserTableComponent,
-    AddUserComponent
+    AddUserComponent,
+    SidenavComponent,
+    ViewNotificationsComponent,
    ],
   imports: [
     // Local Modules
@@ -74,6 +81,7 @@ import { AddUserComponent } from './addUser/addUser.component';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
+    BrowserAnimationsModule,
     // Translate Modules
     TranslateModule.forRoot({
       loader: { provide: TranslateLoader, useClass: AppTranslateLoader },
@@ -81,6 +89,7 @@ import { AddUserComponent } from './addUser/addUser.component';
   ],
   providers: [
     // Local Services
+    NavService,
     // Angular Services
     // Material Services
   ],

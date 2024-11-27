@@ -1,19 +1,23 @@
-:host {
-  display: block;
-  width: 75%;
+.admin-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
 }
 
-.container {
-  width: 100%;
-  padding: 16px; /* Ajuste o padding conforme necessário */
+.title{
+  margin-bottom: 20px;
+  font-size: 36px;
 }
 
 .button-row {
   display: flex;
-  gap: 16px; /* Espaçamento entre os botões */
-  margin-bottom: 16px; /* Espaçamento abaixo dos botões */
+  gap: 16px;
+  /* Espaçamento entre os botões */
+  margin-bottom: 16px;
+  /* Espaçamento abaixo dos botões */
 }
 
 .button-row .mat-raised-button {
-  margin: 0; /* Remover margens adicionais dos botões */
+  margin: 0;
+  /* Remover margens adicionais dos botões */
 }

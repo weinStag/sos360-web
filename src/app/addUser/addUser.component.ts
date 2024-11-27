@@ -33,8 +33,4 @@ export class AddUserComponent implements OnInit {
       // Adicione a lógica para salvar o usuário aqui
     }
   }
-
-  navigateToAdmin() {
-    this.router.navigate(['/admin']);
-  }
 }

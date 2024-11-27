@@ -37,6 +37,6 @@
     </p>
 
     <button mat-raised-button color="primary" type="submit" [disabled]="userForm.invalid">Adicionar Usuário</button>
-    <button mat-raised-button color="accent" type="button" (click)="navigateToAdmin()">Voltar</button>
+    <button mat-raised-button color="accent" type="button" [routerLink]="['/admin']">Voltar</button>
   </form>
 </div>

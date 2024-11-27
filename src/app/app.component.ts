@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { NavService } from '../app/services/nav.service';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NavigationStart, Router, Event, NavigationEnd } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import * as moment from 'moment';
+import { NavItem } from './models/navItems.model';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +11,14 @@ import * as moment from 'moment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  @ViewChild('drawer')
+  appDrawer!: ElementRef;
 
   showLogin: boolean = false;
-  title = 'sos-360-web';
+  title = 'sos-360';
+  navItems: NavItem[] = [];
 
-  constructor(private router: Router, private translation: TranslateService) {
+  constructor(private navService: NavService, private router: Router, private translation: TranslateService) {
     moment.locale("pt-br");
   }
 
@@ -39,6 +44,7 @@ export class AppComponent implements OnInit {
     });
 
     this.initializeLanguage();
+    this.navItems = this.navService.getNavItems();
   }
 
   initializeLanguage() {

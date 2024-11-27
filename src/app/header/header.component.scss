@@ -1,18 +1,165 @@
-.header{
+.header {
   display: flex;
+  padding: 12px;
   justify-content: space-between;
   align-items: center;
-}
+  width: 100%;
+  height: 64px;
+  position: absolute;
+  top: 0px;
+  border-bottom: 3px solid;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 
-.sos-logo {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  label {
+    font-family: Roboto;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 93.75%;
+    /* 60px */
+  }
 
-.right-buttons {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* Espaçamento entre os botões */
+  mat-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+    cursor: pointer;
+
+    mat-badge-content {
+      background-color: black !important;
+    }
+  }
+
+  .header-title-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      background-image: url('../../assets/icons/SOS360.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .hamburger-icon,
+  .log-out-icon,
+  .notification-icon {
+    width: 32px; // Set width as needed
+    height: 32px; // Set height as needed
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .dropdown-menu-notification {
+    display: flex;
+    position: absolute;
+    right: 150px;
+    top: 50px;
+    left: auto;
+    z-index: 999;
+    font-size: 14px;
+    min-width: 400px;
+    max-height: 400px;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .notification-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-height: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .notification-section {
+    height: 75%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .action-section {
+    height: 25%;
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, .15);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .btn-read {
+    cursor: pointer;
+    padding-top: 0.5em;
+  }
+
+  .message-btn {
+    justify-content: flex-start !important;
+  }
+
+  .btn-actions {
+    width: 100%;
+    align-items: center;
+    appearance: none;
+    border-style: none;
+    box-sizing: border-box;
+    box-shadow: none !important;
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 2px 24px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform, opacity;
+    z-index: 0;
+  }
+
+  .btn-actions:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+  }
+
+  .btn-actions:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+  }
+
+  .btn-actions span {
+    z-index: 1;
+    position: relative;
+  }
 }

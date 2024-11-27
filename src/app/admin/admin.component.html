@@ -1,12 +1,9 @@
-<div class="container">
-  <h2>Administração</h2>
-  <p>
-    Lista de usuários cadastrados no sistema.
-  </p>
+<section class="admin-panel">
+  <span class="text-color title roboto-regular">{{ 'sidenav.adminPanel' | translate}}</span>
   <section>
     <div class="button-row">
-      <button mat-raised-button (click)="navigateToAddUser()">Adicionar usuário</button>
+      <button mat-raised-button [routerLink]="['/adduser']" >Adicionar usuário</button>
     </div>
   </section>
   <app-userTable></app-userTable>
-</div>
+</section>
