@@ -1,0 +1,18 @@
+<div class="sidenav-text">
+  <mat-list-item [ngStyle]="{'padding-left': (depth * 12) + 'px'}" [ngClass]="{ 'expanded': expanded }">
+    <span *ngIf="item.children && item.children.length" class="sidenav-title">
+      {{ item.text | translate }}
+      <mat-icon (click)="onItemSelected(item)" [@indicatorRotate]="expanded ? 'expanded' : 'collapsed'">
+        expand_more
+      </mat-icon>
+    </span>
+    <span *ngIf="!(item.children && item.children.length)" class="children">
+      {{ item.text | translate }}
+    </span>
+  </mat-list-item>
+  <div *ngIf="expanded" class="children-div">
+    <app-sidenav class="subitems" *ngFor="let child of item.children" [item]="child" [depth]="depth + 1"
+      [routerLink]="child.link" (click)="onChildSelected()">
+    </app-sidenav>
+  </div>
+</div>

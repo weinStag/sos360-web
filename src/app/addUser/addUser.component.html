@@ -1,0 +1,42 @@
+<div class="container">
+  <h2>Adicionar Usuário</h2>
+  <p>
+    Preencha os campos abaixo para adicionar um novo usuário ao sistema.
+  </p>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="name" placeholder="Ex. João da Silva">
+        <mat-error *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched">
+          Nome é obrigatório
+        </mat-error>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="Ex. joao@example.com">
+        <mat-error *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+          {{ getEmailErrorMessage() }}
+        </mat-error>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Serviço</mat-label>
+        <mat-select formControlName="service">
+          <mat-option *ngFor="let service of services" [value]="service">{{ service }}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="userForm.get('service')?.invalid && userForm.get('service')?.touched">
+          Serviço é obrigatório
+        </mat-error>
+      </mat-form-field>
+    </p>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="userForm.invalid">Adicionar Usuário</button>
+    <button mat-raised-button color="accent" type="button" [routerLink]="['/admin']">Voltar</button>
+  </form>
+</div>

@@ -1,8 +1,10 @@
 {
-  "sidenav.jobs": "Jobs",
-  "sidenav.submit-job": "Submit Job",
-  "sidenav.job-monitor": "Job Monitor",
   "sidenav.notifications": "Notifications",
   "sidenav.view-notifications": "View Notifications",
-  "sidenav.disklog": "Disk Log"
+  "sidenav.adminPanel": "Admin Panel",
+  "sidenav.admin": "Admin",
+  "sidenav.policePanel": "Police Panel",
+  "sidenav.firefighterPanel": "Firefighter Panel",
+  "sidenav.ambulancePanel": "Ambulance Panel",
+  "sidenav.emergency": "Emergency"
 }

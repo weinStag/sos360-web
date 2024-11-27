@@ -48,11 +48,20 @@ $sos-360-web-theme: mat.define-light-theme(
 :root {
   --white: #ffff;
   --white-70: rgba(242, 242, 242, 0.70);
+  --rainy-blue-70: rgba(32, 89, 166, 0.70);
+  --sunny-yellow: #F2E205;
+  --cloudy-blue: #6CAFFE;
+  --clear-sky-blue: #0067B1;
+  --rainy-blue: #2059A6;
+  --dark-blue: #070C26;
   --black: #0D0D0D;
   --black-70: rgba(13, 13, 13, 0.70);
   --dark-bkg: #1f1f1f;
   --dark-header: #272727;
   --light-bkg: #fbfcff;
+
+  --gradient-header-dark: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(87, 0, 0) 50%, rgba(255, 255, 255, 0) 100%);
+  --gradient-header-light: linear-gradient(90deg, rgba(242, 242, 242, 0) 0%, rgb(166, 32, 32) 50%, rgba(242, 242, 242, 0) 100%);
 
   --fullwidth: 100%;
 }
@@ -82,6 +91,73 @@ body.dark-mode {
   .text-color-white {
     color: var(--white-70) !important;
   }
+
+  .header {
+    background: var(--dark-header);
+    border-image: var(--gradient-header-dark) 1;
+
+    label {
+      color: var(--white-70);
+    }
+
+    .hamburger-icon {
+      background-image: url("../src/assets/icons/dark-theme/hamburguer.svg");
+    }
+
+    .log-out-icon {
+      background-image: url("../src/assets/icons/dark-theme/logOut.svg");
+    }
+
+    .dropdown-menu-notification {
+      background-color: var(--dark-header) !important;
+    }
+
+    .btn-actions:hover {
+      background: var(--dark-bkg);
+    }
+
+    .btn-actions {
+      background: var(--dark-header);
+    }
+  }
+
+  .sidenav {
+    background-color: var(--dark-header);
+  }
+
+  .view-notifications, .user-table {
+    table {
+      background-color: var(--dark-header);
+
+      th,
+      td {
+        color: var(--white-70);
+      }
+
+      tr.element-row:not(.expanded-row):hover {
+        background: var(--dark-bkg);
+      }
+
+      tr.element-row:not(.expanded-row):active {
+        background: var(--dark-bkg);
+      }
+    }
+
+    mat-paginator{
+      background-color: var(--dark-header);
+      color: var(--white-70);
+
+      button{
+        color: var(--white-70);
+      }
+    }
+  }
+
+  .sidenav-text {
+    .mdc-list-item__primary-text {
+      color: var(--white-70) !important;
+    }
+  }
 }
 
 body.light-mode {
@@ -94,6 +170,60 @@ body.light-mode {
 
   .text-color-white {
     color: var(--black-70) !important;
+  }
+
+  .header {
+    background-color: var(--white);
+    border-image: var(--gradient-header-light) 1;
+
+    label {
+      color: var(--rainy-blue);
+    }
+
+    .hamburger-icon {
+      background-image: url("../src/assets/icons/light-theme/hamburguer.svg");
+    }
+
+    .log-out-icon {
+      background-image: url("../src/assets/icons/light-theme/logOut.svg");
+    }
+
+    .dropdown-menu-notification {
+      background-color: var(--white) !important;
+    }
+
+    .btn-actions:hover {
+      background: var(--white-70);
+    }
+  }
+
+  .view-notifications, .user-table {
+    table {
+      background-color: var(--white);
+
+      th,
+      td {
+        color: var(--black-70);
+      }
+
+      tr.element-row:not(.expanded-row):hover {
+        background: whitesmoke;
+      }
+
+      tr.element-row:not(.expanded-row):active {
+        background: #efefef;
+      }
+    }
+  }
+
+  .sidenav {
+    background-color: transparent;
+  }
+
+  .sidenav-text {
+    .mdc-list-item__primary-text {
+      color: var(--rainy-blue-70) !important;
+    }
   }
 }
 

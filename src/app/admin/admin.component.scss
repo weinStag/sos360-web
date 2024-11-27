@@ -1,0 +1,23 @@
+.admin-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.title{
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+.button-row {
+  display: flex;
+  gap: 16px;
+  /* Espaçamento entre os botões */
+  margin-bottom: 16px;
+  /* Espaçamento abaixo dos botões */
+}
+
+.button-row .mat-raised-button {
+  margin: 0;
+  /* Remover margens adicionais dos botões */
+}
