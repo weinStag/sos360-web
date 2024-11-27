@@ -4,8 +4,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-user',
-  templateUrl: './AddUser.component.html',
-  styleUrls: ['./AddUser.component.scss']
+  templateUrl: './addUser.component.html',
+  styleUrls: ['./addUser.component.scss']
 })
 export class AddUserComponent implements OnInit {
   userForm!: FormGroup;
