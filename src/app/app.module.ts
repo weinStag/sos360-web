@@ -32,11 +32,11 @@ import { AdminComponent } from './admin/admin.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { UserTableComponent } from './userTable/userTable.component';
-import { AddUserComponent } from './addUser/addUser.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ViewNotificationsComponent } from './view-notifications/view-notifications.component';
 import { NavService } from './services/nav.service';
+import { AddUserComponent } from './addUser/addUser.component';
 
 
 @NgModule({
@@ -49,9 +49,9 @@ import { NavService } from './services/nav.service';
     LanguageSelectorComponent,
     AdminComponent,
     UserTableComponent,
-    AddUserComponent,
     SidenavComponent,
     ViewNotificationsComponent,
+    AddUserComponent,
    ],
   imports: [
     // Local Modules
