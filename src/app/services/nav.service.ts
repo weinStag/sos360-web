@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { MatDrawer } from '@angular/material/sidenav';
 import { NavItem } from '../models/navItems.model';
 
 @Injectable({
@@ -6,7 +7,7 @@ import { NavItem } from '../models/navItems.model';
 })
 export class NavService {
 
-  public appDrawer: any;
+  public appDrawer!: MatDrawer;
 
 
   // LABEL | VALUE = SÃO UTILIZADOS PARA IDENTIFICAÇÃO NO BANCO DE DADOS
@@ -84,6 +85,20 @@ export class NavService {
           },
         ]
       },
+      {
+        link: '',
+        label: 'logs',
+        value: 'LOGS',
+        text:  'sidenav.logs',
+        children: [
+          {
+            link: '/view-logs',
+            label: 'View Logs',
+            value: 'VIEW LOGS',
+            text: 'sidenav.view-logs',
+          },
+        ]
+      }
     ];
   }
 }

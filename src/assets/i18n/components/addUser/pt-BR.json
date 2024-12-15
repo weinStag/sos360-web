@@ -1,0 +1,13 @@
+{
+  "addUser.addUserTitle": "Adicionar Usuário",
+  "addUser.addUserDescription": "Preencha os campos abaixo para adicionar um novo usuário ao sistema.",
+  "addUser.nameLabel": "Nome",
+  "addUser.emailLabel": "Email",
+  "addUser.serviceLabel": "Serviço",
+  "addUser.nameRequired": "Nome é obrigatório",
+  "addUser.emailRequired": "Email é obrigatório",
+  "addUser.emailInvalid": "Email inválido",
+  "addUser.serviceRequired": "Serviço é obrigatório",
+  "addUser.addUserBtn": "Adicionar Usuário",
+  "addUser.backBtn": "Voltar"
+}

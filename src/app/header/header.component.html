@@ -12,7 +12,7 @@
         <section class="notification-section" *ngIf="!(notifications.length === 0)">
           <div *ngIf="notifications.length > 0">
             <div *ngFor="let item of notifications">
-              <div class="row" style="cursor: pointer;">
+              <div class="row pointer">
                 <div class="btn-actions message-btn" (click)="readOne(item.id)">
                   <p class="label-notification-title">{{item.message}}</p>
                 </div>
@@ -21,7 +21,7 @@
           </div>
         </section>
         <section class="notification-section without-notifications" *ngIf="notifications.length === 0">
-          <div class="panel-body ng-scope" style="margin-top: 2em;">
+          <div class="panel-body ng-scope">
             <i class="material-icons icon-nonotification-menu">notifications_off</i>
           </div>
           <div class="row" *ngIf="notifications.length === 0">
@@ -48,6 +48,7 @@
       </div>
     </div>
     <app-dark-mode-toggle></app-dark-mode-toggle>
+    <app-language-selector></app-language-selector>
     <div class="log-out-icon" [routerLink]="loginLink"></div>
   </div>
 </div>
