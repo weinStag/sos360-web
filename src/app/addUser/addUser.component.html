@@ -1,8 +1,7 @@
 <div class="container">
-  <h2>{{ 'addUser.addUserTitle' | translate }}</h2>
-  <p>
-    {{ 'addUser.addUserDescription' | translate }}
-  </p>
+  <span class="text-color title roboto-regular">{{ 'addUser.addUserTitle' | translate }}</span>
+  <p>{{ 'addUser.addUserDescription' | translate }}</p>
+
   <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <p>
       <mat-form-field class="example-full-width">

@@ -24,7 +24,7 @@ export class ViewNotificationsComponent {
   expandedElement!: PeriodicElement | null;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
+  @ViewChild(MatSort) sort: MatSort = new MatSort;
 
   constructor() {
     this.dataSource = new MatTableDataSource(ELEMENT_DATA);

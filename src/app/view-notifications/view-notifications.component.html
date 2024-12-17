@@ -1,13 +1,13 @@
 <section class="view-notifications">
   <span class="text-color title roboto-regular">{{ 'sidenav.view-notifications' | translate }}</span>
-  <p>{{ 'view-notifications.msg ' | translate }}</p>
+  <p>{{ 'view-notifications.msg' | translate }}</p>
   <mat-form-field>
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. SAMU" #input>
   </mat-form-field>
 
   <table mat-table
-      [dataSource]="dataSource" multiTemplateDataRows
+      [dataSource]="dataSource"
       matSort multiTemplateDataRows
       class="mat-elevation-z8">
   <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
