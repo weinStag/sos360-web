@@ -37,6 +37,11 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { ViewNotificationsComponent } from './view-notifications/view-notifications.component';
 import { NavService } from './services/nav.service';
 import { AddUserComponent } from './addUser/addUser.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { PoliceComponent } from './police/police.component';
+import { FirefighterComponent } from './firefighter/firefighter.component';
+import { AmbulanceComponent } from './ambulance/ambulance.component';
+import { ViewLogsComponent } from './view-logs/view-logs.component';
 
 
 @NgModule({
@@ -52,6 +57,10 @@ import { AddUserComponent } from './addUser/addUser.component';
     SidenavComponent,
     ViewNotificationsComponent,
     AddUserComponent,
+    PoliceComponent,
+    FirefighterComponent,
+    AmbulanceComponent,
+    ViewLogsComponent
    ],
   imports: [
     // Local Modules
@@ -82,6 +91,7 @@ import { AddUserComponent } from './addUser/addUser.component';
     MatSortModule,
     MatPaginatorModule,
     BrowserAnimationsModule,
+    MatMenuModule,
     // Translate Modules
     TranslateModule.forRoot({
       loader: { provide: TranslateLoader, useClass: AppTranslateLoader },

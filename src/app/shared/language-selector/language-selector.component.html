@@ -1,1 +1,9 @@
-<p>language-selector works!</p>
+<div class="language-selector">
+  <button mat-icon-button class="language-icon" [matMenuTriggerFor]="languageMenu">
+    <mat-icon>language</mat-icon>
+  </button>
+  <mat-menu #languageMenu="matMenu">
+    <button mat-menu-item (click)="switchLanguage('en')">English</button>
+    <button mat-menu-item (click)="switchLanguage('pt')">Português</button>
+  </mat-menu>
+</div>

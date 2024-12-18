@@ -1,0 +1,7 @@
+{
+  "admin.addUserBtn": "Add User",
+  "admin.msg": "List of registered users",
+  "admin.nameLabel": "Name",
+  "admin.emailLabel": "Email",
+  "admin.serviceLabel": "Service"
+}

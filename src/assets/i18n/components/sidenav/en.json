@@ -6,5 +6,7 @@
   "sidenav.policePanel": "Police Panel",
   "sidenav.firefighterPanel": "Firefighter Panel",
   "sidenav.ambulancePanel": "Ambulance Panel",
-  "sidenav.emergency": "Emergency"
+  "sidenav.emergency": "Emergency",
+  "sidenav.logs": "General Logs",
+  "sidenav.view-logs": "View Logs"
 }

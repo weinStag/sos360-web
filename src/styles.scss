@@ -227,6 +227,22 @@ body.light-mode {
   }
 }
 
+.title-image-container {
+  display: flex;
+  align-items: center;
+}
+
+.title-icon {
+  width: 96px; /* Ajuste o tamanho conforme necessário */
+  height: 96px; /* Ajuste o tamanho conforme necessário */
+  margin-left: 8px; /* Espaçamento entre o título e a imagem */
+}
+
+.title{
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
 .roboto-thin {
   font-family: "Roboto", sans-serif;
   font-weight: 100;

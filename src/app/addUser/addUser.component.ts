@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-add-user',
@@ -9,8 +10,9 @@ import { Router } from '@angular/router';
 })
 export class AddUserComponent implements OnInit {
   userForm!: FormGroup;
-  services: string[] = ['Polícia', 'Bombeiros', 'SAMU'];
-  constructor(private fb: FormBuilder, private router: Router) { }
+  services: string[] = ['Polícia', 'Bombeiros', 'Ambulância'];
+
+  constructor(private fb: FormBuilder, private router: Router, private translate: TranslateService) { }
 
   ngOnInit(): void {
     this.userForm = this.fb.group({
@@ -22,9 +24,9 @@ export class AddUserComponent implements OnInit {
 
   getEmailErrorMessage() {
     if (this.userForm.get('email')?.hasError('required')) {
-      return 'Email é obrigatório';
+      return this.translate.instant('admin.emailRequired');
     }
-    return this.userForm.get('email')?.hasError('email') ? 'Email inválido' : '';
+    return this.userForm.get('email')?.hasError('email') ? this.translate.instant('admin.emailInvalid') : '';
   }
 
   onSubmit() {

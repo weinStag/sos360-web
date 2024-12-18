@@ -141,8 +141,8 @@
     text-align: center;
     text-transform: none;
     transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1), opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
-    user-select: none;
     -webkit-user-select: none;
+    user-select: none;
     touch-action: manipulation;
     will-change: transform, opacity;
     z-index: 0;
@@ -161,5 +161,13 @@
   .btn-actions span {
     z-index: 1;
     position: relative;
+  }
+
+  .pointer{
+    cursor: pointer;
+  }
+
+  .panel-body{
+    margin-top: 2em;
   }
 }
