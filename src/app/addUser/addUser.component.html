@@ -25,9 +25,32 @@
 
     <p>
       <mat-form-field class="example-full-width">
+        <mat-label>{{ 'addUser.passwordLabel' | translate }}</mat-label>
+        <input matInput type="password" formControlName="password" placeholder="Enter your password">
+        <mat-error *ngIf="userForm.get('password')?.invalid && userForm.get('password')?.touched">
+          {{ 'addUser.passwordRequired' | translate }}
+        </mat-error>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>{{ 'addUser.confirmPasswordLabel' | translate }}</mat-label>
+        <input matInput type="password" formControlName="confirmPassword" placeholder="Confirm your password">
+        <mat-error *ngIf="userForm.get('confirmPassword')?.invalid && userForm.get('confirmPassword')?.touched">
+          {{ getConfirmPasswordErrorMessage() }}
+        </mat-error>
+        <mat-error *ngIf="userForm.hasError('mismatch') && userForm.get('confirmPassword')?.touched">
+          {{ 'addUser.passwordMismatch' | translate }}
+        </mat-error>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field class="example-full-width">
         <mat-label>{{ 'addUser.serviceLabel' | translate }}</mat-label>
         <mat-select formControlName="service">
-          <mat-option *ngFor="let service of services" [value]="service">{{ service }}</mat-option>
+          <mat-option *ngFor="let service of services" [value]="service">{{ service | translate }}</mat-option>
         </mat-select>
         <mat-error *ngIf="userForm.get('service')?.invalid && userForm.get('service')?.touched">
           {{ 'addUser.serviceRequired' | translate }}
@@ -35,7 +58,9 @@
       </mat-form-field>
     </p>
 
-    <button mat-raised-button color="primary" type="submit" [disabled]="userForm.invalid">{{ 'addUser.addUserBtn' | translate }}</button>
-    <button mat-raised-button color="accent" type="button" [routerLink]="['/admin']">{{ 'addUser.backBtn' | translate }}</button>
+    <div class="button-row">
+      <button mat-raised-button color="primary" type="submit" [disabled]="userForm.invalid">{{ 'addUser.addUserBtn' | translate }}</button>
+      <button mat-raised-button color="accent" type="button" [routerLink]="['/admin']">{{ 'addUser.backBtn' | translate }}</button>
+    </div>
   </form>
 </div>

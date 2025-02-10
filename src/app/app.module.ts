@@ -31,7 +31,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { AdminComponent } from './admin/admin.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { UserTableComponent } from './userTable/userTable.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ViewNotificationsComponent } from './view-notifications/view-notifications.component';
@@ -42,6 +41,7 @@ import { PoliceComponent } from './police/police.component';
 import { FirefighterComponent } from './firefighter/firefighter.component';
 import { AmbulanceComponent } from './ambulance/ambulance.component';
 import { ViewLogsComponent } from './view-logs/view-logs.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -53,7 +53,6 @@ import { ViewLogsComponent } from './view-logs/view-logs.component';
     FooterComponent,
     LanguageSelectorComponent,
     AdminComponent,
-    UserTableComponent,
     SidenavComponent,
     ViewNotificationsComponent,
     AddUserComponent,
@@ -68,6 +67,7 @@ import { ViewLogsComponent } from './view-logs/view-logs.component';
     // Angular Modules
     BrowserModule,
     ReactiveFormsModule,
+    HttpClientModule,
     // Material Modules
     MatRadioModule,
     MatSelectModule,

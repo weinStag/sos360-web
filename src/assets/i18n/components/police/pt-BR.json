@@ -1,3 +1,13 @@
 {
-  "policia.msg": "Requisições de atendimento policial"
+  "policia.msg": "Requisições de atendimento policial",
+  "police.id": "ID",
+  "police.requesterName": "Nome do Requisitante",
+  "police.attendant": "Atendente",
+  "police.description": "Descrição",
+  "police.status": "Status",
+  "police.createdAt": "Criado em",
+  "police.updatedAt": "Atualizado em",
+  "police.requesterId": "ID do Requisitante",
+  "police.attendantId": "ID do Atendente",
+  "police.attend": "Atender"
 }

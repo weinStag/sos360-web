@@ -1,3 +1,12 @@
 {
-    "firefighter.msg": "Requisições de atendimento de bombeiros"
+  "firefighter.msg": "Requisições de atendimento de bombeiros",
+  "firefighter.id": "ID",
+  "firefighter.requesterName": "Nome do Requisitante",
+  "firefighter.attendant": "Atendente",
+  "firefighter.description": "Descrição",
+  "firefighter.status": "Status",
+  "firefighter.createdAt": "Criado em",
+  "firefighter.updatedAt": "Atualizado em",
+  "firefighter.requesterId": "ID do Requisitante",
+  "firefighter.attendantId": "ID do Atendente"
 }

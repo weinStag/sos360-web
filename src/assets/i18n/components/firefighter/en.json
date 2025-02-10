@@ -1,3 +1,12 @@
 {
-    "firefighter.msg": "Requests for firefighter assistance"
+  "firefighter.msg": "Requests for firefighter assistance",
+  "firefighter.id": "ID",
+  "firefighter.requesterName": "Requester Name",
+  "firefighter.attendant": "Attendant",
+  "firefighter.description": "Description",
+  "firefighter.status": "Status",
+  "firefighter.createdAt": "Created At",
+  "firefighter.updatedAt": "Updated At",
+  "firefighter.requesterId": "Requester ID",
+  "firefighter.attendantId": "Attendant ID"
 }

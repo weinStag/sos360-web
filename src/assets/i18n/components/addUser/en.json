@@ -3,11 +3,22 @@
   "addUser.addUserDescription": "Fill in the fields below to add a new user to the system.",
   "addUser.nameLabel": "Name",
   "addUser.emailLabel": "Email",
+  "addUser.passwordLabel": "Password",
+  "addUser.confirmPasswordLabel": "Confirm Password",
   "addUser.serviceLabel": "Service",
   "addUser.nameRequired": "Name is required",
   "addUser.emailRequired": "Email is required",
   "addUser.emailInvalid": "Invalid email",
+  "addUser.passwordRequired": "Password is required",
+  "addUser.passwordMismatch": "Passwords do not match",
   "addUser.serviceRequired": "Service is required",
+  "addUser.emailAlreadyRegistered": "Email already registered",
+  "addUser.userAddedSuccessfully": "User added successfully",
+  "addUser.errorAddingUser": "Error adding user",
+  "addUser.errorCheckingEmail": "Error checking email",
   "addUser.addUserBtn": "Add User",
-  "addUser.backBtn": "Back"
+  "addUser.backBtn": "Back",
+  "addUser.police": "Police",
+  "addUser.firefighter": "Firefighter",
+  "addUser.ambulance": "Ambulance"
 }

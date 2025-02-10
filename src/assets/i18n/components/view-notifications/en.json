@@ -1,3 +1,14 @@
 {
-  "view-notifications.msg": "Emergency call notifications list"
+  "view-notifications.msg": "Emergency call notifications list",
+  "view-notifications.columns.id": "ID",
+  "view-notifications.columns.requester": "Requester",
+  "view-notifications.columns.attendant": "Attendant",
+  "view-notifications.columns.type": "Type",
+  "view-notifications.columns.status": "Status",
+  "view-notifications.columns.createdAt": "Created At",
+  "view-notifications.columns.updatedAt": "Updated At",
+  "view-notifications.expanded.description": "Description:",
+  "view-notifications.expanded.cpf": "CPF:",
+  "view-notifications.expanded.phone": "Phone:",
+  "view-notifications.expanded.address": "Address:"
 }

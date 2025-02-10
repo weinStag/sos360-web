@@ -3,11 +3,22 @@
   "addUser.addUserDescription": "Preencha os campos abaixo para adicionar um novo usuário ao sistema.",
   "addUser.nameLabel": "Nome",
   "addUser.emailLabel": "Email",
+  "addUser.passwordLabel": "Senha",
+  "addUser.confirmPasswordLabel": "Confirmar Senha",
   "addUser.serviceLabel": "Serviço",
   "addUser.nameRequired": "Nome é obrigatório",
   "addUser.emailRequired": "Email é obrigatório",
   "addUser.emailInvalid": "Email inválido",
+  "addUser.passwordRequired": "Senha é obrigatória",
+  "addUser.passwordMismatch": "As senhas não coincidem",
   "addUser.serviceRequired": "Serviço é obrigatório",
+  "addUser.emailAlreadyRegistered": "Email já registrado",
+  "addUser.userAddedSuccessfully": "Usuário adicionado com sucesso",
+  "addUser.errorAddingUser": "Erro ao adicionar usuário",
+  "addUser.errorCheckingEmail": "Erro ao verificar email",
   "addUser.addUserBtn": "Adicionar Usuário",
-  "addUser.backBtn": "Voltar"
+  "addUser.backBtn": "Voltar",
+  "addUser.police": "Polícia",
+  "addUser.firefighter": "Bombeiros",
+  "addUser.ambulance": "Ambulância"
 }

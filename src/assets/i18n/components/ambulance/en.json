@@ -1,3 +1,12 @@
 {
-  "ambulance.msg": "Requests for ambulance assistance"
+  "ambulance.msg": "Requests for ambulance assistance",
+  "ambulance.id": "ID",
+  "ambulance.requesterName": "Requester Name",
+  "ambulance.attendant": "Attendant",
+  "ambulance.description": "Description",
+  "ambulance.status": "Status",
+  "ambulance.createdAt": "Created At",
+  "ambulance.updatedAt": "Updated At",
+  "ambulance.requesterId": "Requester ID",
+  "ambulance.attendantId": "Attendant ID"
 }

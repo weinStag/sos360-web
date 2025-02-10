@@ -1,3 +1,13 @@
 {
-  "police.msg": "Requests for police assistance"
+  "police.msg": "Requests for police assistance",
+  "police.id": "ID",
+  "police.requesterName": "Requester Name",
+  "police.attendant": "Attendant",
+  "police.description": "Description",
+  "police.status": "Status",
+  "police.createdAt": "Created At",
+  "police.updatedAt": "Updated At",
+  "police.requesterId": "Requester ID",
+  "police.attendantId": "Attendant ID",
+  "police.attend": "Attend"
 }

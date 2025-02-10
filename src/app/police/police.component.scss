@@ -1,0 +1,26 @@
+.police {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+table {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+tr.detail-row {
+  height: 0;
+}
+
+.element-row td {
+  border-bottom-width: 0;
+}
+
+.element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+/* ...additional styles as needed... */

@@ -1,3 +1,14 @@
 {
-  "view-notifications.msg": "Lista de notificações de chamados de emergência"
+  "view-notifications.msg": "Lista de notificações de chamados de emergência",
+  "view-notifications.columns.id": "ID",
+  "view-notifications.columns.requester": "Solicitante",
+  "view-notifications.columns.attendant": "Atendente",
+  "view-notifications.columns.type": "Tipo",
+  "view-notifications.columns.status": "Status",
+  "view-notifications.columns.createdAt": "Criado em",
+  "view-notifications.columns.updatedAt": "Atualizado em",
+  "view-notifications.expanded.description": "Descrição:",
+  "view-notifications.expanded.cpf": "CPF:",
+  "view-notifications.expanded.phone": "Telefone:",
+  "view-notifications.expanded.address": "Endereço:"
 }

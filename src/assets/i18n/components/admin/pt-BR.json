@@ -1,7 +1,9 @@
 {
+  "admin.idLabel": "ID",
   "admin.addUserBtn": "Adicionar Usuário",
   "admin.msg": "Lista de usuários cadastrados",
   "admin.nameLabel": "Nome",
   "admin.emailLabel": "Email",
-  "admin.serviceLabel": "Serviço"
+  "admin.serviceLabel": "Serviço",
+  "admin.deleteLabel": "Excluir"
 }
