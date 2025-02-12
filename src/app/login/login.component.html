@@ -1,1 +1,32 @@
-<p>welcome to login</p>
+<section class="main-container">
+  <img src="../../assets/images/wallpaper-login.gif">
+  <section class="login-container">
+    <div class="login-frame">
+      <div class="login-title-frame">
+        <img src="../../assets/icons/SOS360.svg">
+      </div>
+      <div class="login-form">
+        <div class="login-form-field">
+          <span class="roboto-medium">Email: </span>
+          <input matInput class="input-login roboto-bold">
+        </div>
+        <div class="login-form-field">
+          <span class="roboto-medium">Password: </span>
+          <div class="password-input-n-help">
+            <input matInput [type]="hide ? 'password' : 'text'" class="input-login roboto-bold">
+            <span class="roboto-regular forgot-password">Forgot Password?</span>
+          </div>
+        </div>
+        <button class="password-visibility-button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon class="color-white-fixed">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </div>
+      <div class="login-actions">
+        <button mat-stroked-button class="roboto-bold" [routerLink]="homeLink">
+          Sign in
+          <mat-icon>login</mat-icon>
+        </button>
+      </div>
+    </div>
+  </section>
+</section>

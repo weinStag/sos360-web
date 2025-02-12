@@ -9,7 +9,13 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
+  hide = true;
+  homeLink = '/home';
+
   ngOnInit() {
   }
 
+  SignIn(){
+
+  }
 }
