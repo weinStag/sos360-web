@@ -73,20 +73,6 @@ export class NavService {
       },
       {
         link: '',
-        label: 'notifications',
-        value: 'NOTIFICATIONS',
-        text: 'sidenav.notifications',
-        children: [
-          {
-            link: '/view-notifications',
-            label: 'View Notifications',
-            value: 'VIEW_NOTIFICATIONS',
-            text: 'sidenav.view-notifications',
-          },
-        ]
-      },
-      {
-        link: '',
         label: 'logs',
         value: 'LOGS',
         text:  'sidenav.logs',

@@ -33,7 +33,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { ViewNotificationsComponent } from './view-notifications/view-notifications.component';
 import { NavService } from './services/nav.service';
 import { AddUserComponent } from './addUser/addUser.component';
 import { MatMenuModule } from '@angular/material/menu';
@@ -54,7 +53,6 @@ import { HttpClientModule } from '@angular/common/http';
     LanguageSelectorComponent,
     AdminComponent,
     SidenavComponent,
-    ViewNotificationsComponent,
     AddUserComponent,
     PoliceComponent,
     FirefighterComponent,

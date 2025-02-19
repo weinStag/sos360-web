@@ -3,7 +3,6 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { AddUserComponent } from './addUser/addUser.component';
-import { ViewNotificationsComponent } from './view-notifications/view-notifications.component';
 import { PoliceComponent } from './police/police.component';
 import { AmbulanceComponent } from './ambulance/ambulance.component';
 import { FirefighterComponent } from './firefighter/firefighter.component';
@@ -15,7 +14,6 @@ const routes: Routes =
     { path: 'login', component: LoginComponent },
     { path: 'admin', component: AdminComponent },
     { path: 'adduser', component: AddUserComponent },
-    { path: 'view-notifications', component: ViewNotificationsComponent },
     { path: 'police', component: PoliceComponent },
     { path: 'ambulance', component: AmbulanceComponent },
     { path: 'firefighter', component: FirefighterComponent },

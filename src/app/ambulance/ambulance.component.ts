@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { ProtocolService } from '../services/protocol.service';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { Emergency } from '../models/emergency.model';
 
 
 @Component({
@@ -72,28 +73,6 @@ export class AmbulanceComponent implements OnInit {
       });
     }
   }
-}
-
-export interface Emergency {
-  id: string;
-  requester: {
-    name: string;
-    cpf: string;
-    phone: string;
-    address: string;
-  };
-  attendant?: {
-    name: string;
-    cpf: string;
-    phone: string;
-  };
-  type: string;
-  description: string;
-  status: string;
-  createdAt: Date;
-  updatedAt: Date;
-  requesterId: string;
-  attendantId?: string;
 }
 
 // Implement a emergency object array to test the table

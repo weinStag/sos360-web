@@ -1,9 +1,9 @@
 <div class="container">
   <span class="text-color title roboto-regular">{{ 'addUser.addUserTitle' | translate }}</span>
-  <p>{{ 'addUser.addUserDescription' | translate }}</p>
+  <p class="text-color">{{ 'addUser.addUserDescription' | translate }}</p>
 
   <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-    <p>
+    <p class="text-color">
       <mat-form-field class="example-full-width">
         <mat-label>{{ 'addUser.nameLabel' | translate }}</mat-label>
         <input matInput formControlName="name" placeholder="Ex. João da Silva">
@@ -13,7 +13,7 @@
       </mat-form-field>
     </p>
 
-    <p>
+    <p class="text-color">
       <mat-form-field class="example-full-width">
         <mat-label>{{ 'addUser.emailLabel' | translate }}</mat-label>
         <input matInput formControlName="email" placeholder="Ex. joao@example.com">
@@ -23,7 +23,7 @@
       </mat-form-field>
     </p>
 
-    <p>
+    <p class="text-color">
       <mat-form-field class="example-full-width">
         <mat-label>{{ 'addUser.passwordLabel' | translate }}</mat-label>
         <input matInput type="password" formControlName="password" placeholder="Enter your password">
@@ -33,7 +33,7 @@
       </mat-form-field>
     </p>
 
-    <p>
+    <p class="text-color">
       <mat-form-field class="example-full-width">
         <mat-label>{{ 'addUser.confirmPasswordLabel' | translate }}</mat-label>
         <input matInput type="password" formControlName="confirmPassword" placeholder="Confirm your password">
@@ -46,7 +46,7 @@
       </mat-form-field>
     </p>
 
-    <p>
+    <p class="text-color">
       <mat-form-field class="example-full-width">
         <mat-label>{{ 'addUser.serviceLabel' | translate }}</mat-label>
         <mat-select formControlName="service">

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { NotificationDTO } from '../models/notificationDTO.model';
 import { Router } from '@angular/router';
+import { Emergency } from '../models/emergency.model';
+import { NotificationService } from '../services/notification.service';
 
 @Component({
   selector: 'app-header',
@@ -13,91 +14,24 @@ export class HeaderComponent implements OnInit {
   homeLink = '/home';
   loginLink = '/login';
   amount: number = 5;
-  notifications: NotificationDTO[] = [];
+  notifications: Emergency[] = [];
   dropdownMenu: boolean = false;
   dropdownMenuNotification: boolean = false;
 
   constructor(
-    //private PushNotificationService: PushNotificationService,
+    private notificationService: NotificationService,
     private router: Router,
   ) {}
 
   ngOnInit() {
-    this.startListeners();
-    this.listenNotifications();
-
-    // put some notifications in the array
-    this.notifications.push(
-      {
-        id: 1,
-        message: 'New emergency request Police',
-        toUserId: 1,
-        read: false,
-        createdAt: '2021-07-01T00:00:00',
-      },
-      {
-        id: 2,
-        message: 'New emergency request Firefighters',
-        toUserId: 1,
-        read: false,
-        createdAt: '2021-07-01T00:00:00',
-      },
-      {
-        id: 3,
-        message: 'New emergency request Ambulance',
-        toUserId: 1,
-        read: false,
-        createdAt: '2021-07-01T00:00:00',
-      }
-    );
+    this.notificationService.onNewEmergency().subscribe((emergency: Emergency) => {
+      this.notifications.push(emergency);
+      this.amount++;
+    });
   }
 
   toggleSideNav() {
     this.ToggleSideNav.emit();
-  }
-
-  //Notification methods:
-
-  listenNotifications() {
-    // this.sseService.subscribe(this.WS_URL).subscribe({
-    //   next: (event) => {
-    //     this.amount = event.data;
-    //   },
-    // });
-    // this.PushNotificationService.getAllUnreadByUserId(this.id).subscribe((node) => {
-    //   this.amount = node.length;
-    // });
-  }
-
-  startListeners() {
-    // if (this.storedUser) {
-    //   this.id = this.storedUser.id;
-    //   this.sseService.startNotifications(this.id).subscribe((node) => {});
-    // }
-    //  else {
-    //   let route = this.tenantService.getTenant() + '/login';
-    //   this.router.navigate([route]);
-    // }
-  }
-
-  //Clique no sininho
-  getAllNotifications() {
-    // this.id = this.storedUser.id;
-    // this.PushNotificationService.getAllUnreadByUserId(this.id).subscribe(
-    //   (node) => {
-    //     this.notifications = node;
-    //   }
-    // );
-  }
-
-  //lixeira geral
-  readAllNotifications() {
-    // this.id = this.storedUser.id;
-    // this.PushNotificationService.readAll(this.notifications).subscribe(
-    //   (node) => {
-    //     this.amount = 0;
-    //   }
-    // );
   }
 
   //ver todas as notificações
@@ -115,7 +49,6 @@ export class HeaderComponent implements OnInit {
 
   toogleDropdownNotification() {
     this.dropdownMenuNotification = !this.dropdownMenuNotification;
-    this.getAllNotifications();
   }
 
 

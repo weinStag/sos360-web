@@ -49,6 +49,7 @@ $sos-360-web-theme: mat.define-light-theme(
   --white: #ffff;
   --white-70: rgba(242, 242, 242, 0.70);
   --rainy-blue-70: rgba(32, 89, 166, 0.70);
+  --rainy-blue-40: rgba(32, 89, 166, 0.40);
   --sunny-yellow: #F2E205;
   --cloudy-blue: #6CAFFE;
   --clear-sky-blue: #0067B1;
@@ -125,7 +126,7 @@ body.dark-mode {
     background-color: var(--dark-header);
   }
 
-  .view-notifications, .user-table {
+  .view-notifications, .user-table, .police, .ambulance, .firefighter {
     table {
       background-color: var(--dark-header);
 
@@ -158,6 +159,10 @@ body.dark-mode {
       color: var(--white-70) !important;
     }
   }
+  --text-color: var(--white-70);  // Light text for dark mode
+  --outline-color: rgb(51, 51, 51); // Darker outline for dark mode
+  --aux-color: var(--dark-header);
+  --bkg-color: var(--dark-bkg);
 }
 
 body.light-mode {
@@ -197,7 +202,7 @@ body.light-mode {
     }
   }
 
-  .view-notifications, .user-table {
+  .view-notifications, .user-table, .police, .ambulance, .firefighter {
     table {
       background-color: var(--white);
 
@@ -225,11 +230,17 @@ body.light-mode {
       color: var(--rainy-blue-70) !important;
     }
   }
+
+  --text-color: var(--black-70);  // Dark text for light mode
+  --outline-color: var(--rainy-blue-40); // Lighter outline for light mode
+  --aux-color: var(--light-bkg);
+  --bkg-color: var(--white);
 }
 
 .title-image-container {
   display: flex;
-  align-items: center;
+  align-items: end;
+  justify-content: space-between;
 }
 
 .title-icon {
@@ -323,4 +334,8 @@ body.light-mode {
 
 .mdc-radio__inner-circle {
   background: var(--mdc-radio-selected-icon-color, #6200ee);
+}
+
+table {
+  box-shadow: none !important;
 }

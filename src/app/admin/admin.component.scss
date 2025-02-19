@@ -42,3 +42,44 @@ section {
 td, th {
   width: auto; /* Ajuste a largura das células para se ajustar ao conteúdo */
 }
+
+mat-form-field, mat-expansion-panel-header {
+  border-radius: 5px;
+
+  mat-label {
+    color: var(--text-color) !important;
+  }
+}
+
+.filter{
+  width: 100%;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper{
+  background-color: var(--aux-color) !important;
+}
+
+::ng-deep .mat-mdc-paginator-icon:not([disabled]) {
+  fill: var(--text-color) !important;
+}
+
+::ng-deep .mat-mdc-icon-button[disabled] .mat-mdc-paginator-icon {
+  fill: var(--disabled-text-color) !important;
+}
+
+::ng-deep .mat-mdc-paginator {
+  background: var(--aux-color);
+}
+
+::ng-deep .mat-mdc-radio-button .mdc-form-field,
+::ng-deep .mat-mdc-input-element,
+::ng-deep .mat-mdc-select-value-text,
+::ng-deep .mat-mdc-select-arrow {
+  color: var(--text-color) !important;
+}
+
+::ng-deep .mdc-notched-outline__leading,
+::ng-deep .mdc-notched-outline__notch,
+::ng-deep .mdc-notched-outline__trailing {
+  border-color: var(--outline-color) !important;
+}

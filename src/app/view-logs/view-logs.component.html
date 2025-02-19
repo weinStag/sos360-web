@@ -1,9 +1,8 @@
 <section class="view-logs">
   <span class="text-color title roboto-regular">{{ 'sidenav.view-logs' | translate }}</span>
-  <p>{{ 'view-logs.msg' | translate }}</p>
-  <mat-form-field>
+  <mat-form-field class="filter">
     <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. SAMU" #input>
+    <input matInput (keyup)="applyFilter($event)" #input>
   </mat-form-field>
 
   <div class="mat-elevation-z8" class="user-table">

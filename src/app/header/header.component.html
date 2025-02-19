@@ -31,20 +31,6 @@
             </div>
           </div>
         </section>
-        <section class="action-section" *ngIf="!(notifications.length === 0)">
-          <button mat-raised-button class="btn-actions text-color-white" (click)='viewAllNotifications()'>
-            {{'header.viewAllNotifications' | translate}}
-          </button>
-          <span>|</span>
-          <button mat-raised-button class="btn-actions text-color-white" (click)='readAllNotifications()'>
-            {{'header.clearNotifications' | translate}}
-          </button>
-        </section>
-        <section class="action-section" *ngIf="(notifications.length === 0)">
-          <button mat-raised-button class="btn-actions text-color-white" (click)='viewAllNotifications()'>
-            {{'header.viewAllNotifications' | translate}}
-          </button>
-        </section>
       </div>
     </div>
     <app-dark-mode-toggle></app-dark-mode-toggle>
